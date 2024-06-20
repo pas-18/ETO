@@ -1,0 +1,14 @@
+{% extends 'Erutan_Technology_Organizations/base.xhtml' %}
+{% block page_header %}
+  <div class="p-3 mb-4 bg-light border rounded-3">
+    <div class="container-fluid py-4">
+      <h1 class="display-3">Welcome to ETO!</h1>
+      <p class="lead">('ETO' means ErutanTechnology Organization instead of Earth-Trisolaris Organization)</p>
+      <a class="btn btn-primary brn-lg mt-1"
+         href="{% url 'accounts:register' %}">Register
+        (This function hasn't been completely developed yet.
+        If you want to use it(or meet any problem),
+        please contact the administrator) &raquo;</a>
+    </div>
+  </div>
+{% endblock page_header %}

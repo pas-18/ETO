@@ -1,0 +1,27 @@
+{%extends 'Erutan_Technology_Organizations/base.xhtml' %}
+
+{% block page_header %}
+  <h1>{{ topic.text }}</h1>
+{% endblock page_header %}
+
+{% block content %}
+  <p>
+    <a href="{% url 'Erutan_Technology_Organizations:new_entry' topic.id %}">add a new entry</a>
+  </p>
+
+  {% for entry in entries %}
+    <div class="card mb-3">
+    <!-- Card header with timestamp and edit lint -->
+      <h4 class="Card-header">
+        {{ entry.date_added|date:'M d, Y H:i' }}
+        <small><a href="{% url 'Erutan_Technology_Organizations:edit_entry' entry.id %}">
+          Edit entry</a></small>
+      </h4>
+      <!-- Card body with entry text -->
+      <div class="card-body">{{ entry.text|linebreaks }}</div>
+    </div>
+  {% empty %}
+    <p>There is no entries for this topic yet.</p>
+  {% endfor %}
+
+{% endblock content %}

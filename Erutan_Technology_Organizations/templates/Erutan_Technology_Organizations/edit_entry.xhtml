@@ -1,0 +1,14 @@
+{%extends 'Erutan_Technology_Organizations/base.xhtml' %}
+
+{% block content %}
+
+  <p><a href="{% url 'Erutan_Technology_Organizations:topic' topic.id %}">{{ topic }}</a></p>
+  <p>Edit entry:</p>
+
+  <form action="{% url 'Erutan_Technology_Organizations:edit_entry' entry.id %}" method="post">
+    {% csrf_token %}
+    {{ form.as_div }}
+    <button name="submit">Save changes</button>
+  </form>
+
+{% endblock content %}

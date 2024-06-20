@@ -1,0 +1,16 @@
+Erutan_Technology_Organization
+Erutan_Technology_Organizations
+ETO_env\Scripts\activate
+from Erutan_Technology_Organizations.models import Topic
+http://localhost:8000/
+http://localhost:8000/admin
+python manage.py makemigrations Erutan_Technology_Organizations
+python manage.py migrate
+python manage.py runserver
+python manage.py shell
+Topic.objects.all()
+
+django.core.exceptions.ImproperlyConfigured:
+Specifying a namespace in include() without providing an app_name is not supported.
+Set the app_name attribute in the included module,
+or pass a 2-tuple containing the list of patterns and app_name instead.
