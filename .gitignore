@@ -1,3 +1,4 @@
 ETO_env/
 __pycache__/
 *.sqlite3
+tips.txt

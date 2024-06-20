@@ -9,8 +9,5 @@ python manage.py migrate
 python manage.py runserver
 python manage.py shell
 Topic.objects.all()
-
-django.core.exceptions.ImproperlyConfigured:
-Specifying a namespace in include() without providing an app_name is not supported.
-Set the app_name attribute in the included module,
-or pass a 2-tuple containing the list of patterns and app_name instead.
+remote add origin https://github.com/pas-18/repository.git
+git push -u origin master
